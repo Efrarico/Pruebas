@@ -1,0 +1,61 @@
+import java.lang.reflect.Array;
+
+public class ProblemaCuatro {
+	
+	public static void main (String[] args) {
+		
+		
+		int[] x = new int[4];
+		
+		x[0] = 2;
+		x[1] = 4;
+		x[2] = 6;
+		x[3] = 8;
+		
+		int[] y = new int[4];
+		
+		y[0] = 5;
+		y[1] = 4;
+		y[2] = 3;
+		y[3] = 2;
+		
+		int sumaResultados = 0;
+		
+		
+		int[] resultados = new int[4];
+		for (int i = 0; i < Array.getLength(x); i++) {
+			
+			 resultados[i] = x[i] * y[i];
+			 	 
+		}
+		
+
+        for (int resultado : resultados) {
+            sumaResultados += resultado;
+        }
+		
+        
+        int suma = 0;
+
+        for (int numero : x) {
+            suma += numero;
+        }
+        
+        int suma2 = 0;
+
+        for (int numero1 : y) {
+            suma2 += numero1;
+        }
+        
+        int multi = suma * suma2;
+        
+        if(sumaResultados == multi) {
+        	
+        	System.out.println("No es válido");
+        }else {
+        	System.out.println("Se cumple");
+        }
+        
+	}
+
+}
